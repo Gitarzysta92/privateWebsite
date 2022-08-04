@@ -6,6 +6,8 @@ import PageReferenceSection from "../components/page-reference-section/page-refe
 import SectionHeader from "../components/section-header/section-header";
 import { aboutPageReferenceSection, cryptoAlertGridTile, gridSectionHeader } from "../data/data";
 import "@fontsource/lato"
+import "@fontsource/lato/700.css"
+import "@fontsource/lato/900.css"
 
 
 
