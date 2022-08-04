@@ -1,0 +1,57 @@
+.burger-button {
+  cursor: pointer;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  div {
+    width: 40px;
+    height: 5px;
+    margin: 4px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all ease-in-out .2s;
+  }
+
+  &:hover {
+    div {
+      margin: 5px 0px;
+    }
+  }
+
+  &.animate div {
+    animation-name: example;
+    animation-duration: .5s;
+  }
+
+  &.animate div:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  &.animate div:nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  &.animate div:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  @keyframes example {
+    from {
+      transform: translate(0px);
+    }
+
+    33% {
+      transform: translate(5px);
+    }
+
+    66% {
+      transform: translate(-5px);
+    }
+
+    to {
+      transform: translate(0px);
+    }
+  }
+}
+

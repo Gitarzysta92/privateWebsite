@@ -1,46 +1,98 @@
-// data
-export const links = [
+import { IGridTile } from "../components/grid-tile/grid-tile"
+import { INavigationMenuItem } from "../components/navigation-menu/navigation-menu-item"
+import { IPageReferenceSection } from "../components/page-reference-section/page-reference-section"
+import { ISectionHeader } from "../components/section-header/section-header"
+import { IFooter } from "../templates/footer-template"
+
+
+export const mainMenu: INavigationMenuItem[] = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
+    title: "Home",
+    link: "/",
+    appearance: "link"
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
+    title: "About me",
+    link: "/about-me",
+    appearance: "link"
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
+    title: "Projects",
+    appearance: "link",
+    link: "/projects",
+    childerns: [
+      { 
+        title: "Crypto alert",
+        link: "/projects/crypto-alert",
+        appearance: "link",
+      },
+      { 
+        title: "Hex chess",
+        link: "/projects/hex-chess",
+        appearance: "link",
+      }
+    ]
   },
   {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
+    title: "Contact",
+    link: "/contact",
+    appearance: "solid"
+  }
 ]
+
+export const footer: IFooter = {
+  first: {
+    title: "Site map",
+    items: [
+      { title: "Home", link: "/" },
+      { title: "About me", link: "/" },
+      { title: "Contact", link: "/" }
+    ]
+  },
+  second: {
+    title: "Projects",
+    items: [
+      { title: "Hex chess", link: "/" },
+      { title: "Crypto alert", link: "/" }
+    ]
+  },
+  third: {
+    title: "Social media",
+    items: [
+      { title: "Facebook", link: "/" },
+      { title: "Linkedin", link: "/" },
+      { title: "Github", link: "/" }
+    ]
+  },
+  fourth: {
+    title: "Contact",
+    items: [
+      { title: "m.lukasiewicz92@gmail.com", link: "/" },
+    ]
+  },
+  bottomBar: "Copyright 2022"
+}
+
+export const aboutPageReferenceSection: IPageReferenceSection = {
+  title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  button: {
+    label: "About me",
+    link: ""
+  }
+}
+
+export const gridSectionHeader: ISectionHeader = {
+  title: "Projects",
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  faIcon: "fa-solid fa-chevron-down"
+}
+
+export const cryptoAlertGridTile: IGridTile = {
+  title: "Crypto Alert.",
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  button: {
+    label: "Read more",
+    link: ""
+  }
+}

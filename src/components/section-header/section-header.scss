@@ -1,0 +1,17 @@
+.section-header {
+  padding: 50px;
+  text-align: center;
+
+  h4 {
+    font-weight: 900;
+    transition: all ease-in-out .2s;
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  p {
+    padding: 30px;
+    transition: all ease-in-out .2s;
+  }
+}

@@ -1,0 +1,59 @@
+header {
+  position: relative;
+
+  .container {
+    padding: 30px 50px;
+  }
+
+  .toggle-wrapper {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .container {
+      padding: 10px 50px;
+    }
+  }
+
+  .slide-pane {
+    .container, .row, .mobile-menu-wrapper {
+      height: 100%;
+    }
+  }
+
+  .mobile-menu-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > *:not(hr) {
+      margin: 20px 0;
+    }
+
+    hr {
+      border-top-width: 1px;
+      border-top-style: solid;
+      width: 20px;
+      opacity: .5;
+    }
+
+    .navigation-wrapper li {
+      text-align: center;
+    }
+
+    .cross-button {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      margin: 0;
+    }
+
+  }
+}

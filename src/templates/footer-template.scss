@@ -1,0 +1,28 @@
+footer {
+  margin-top: 100px;
+
+  .container {
+    padding: 70px 100px 40px;
+  }
+
+  .list-column {
+    span {
+      font-weight: 900;
+    }
+    ul {
+      margin-top: 15px;
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 1px 0;
+      }
+    }
+  }
+
+
+  .bottom-bar {
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+  }
+}

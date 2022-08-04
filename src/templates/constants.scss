@@ -1,0 +1,31 @@
+// Shared theme
+$theme-orange: #FFC107;
+
+// Light theme
+$background-primary-light-theme: #F3F2F2;
+$background-secondary-light-theme: #fff;
+
+$text-primary-light-theme: #2D2E30;
+$text-secondary-light-theme: #717171;
+
+// Dark theme
+$background-primary-dark-theme: #2D2E30;
+$background-secondary-dark-theme: #717171;
+$background-tertiary-dark-theme: #191D20;
+$background-quaternary-dark-theme: #151617;
+
+$text-primary-dark-theme: #fff;
+$text-secondary-dark-theme: #aaabb4;
+$text-tertiary-dark-theme: #cacaca;
+
+// Misc
+$primary-gradient: linear-gradient(143.15deg, #FFC107 31.72%, #A2D96A 95.95%, #40F1D1 120.92%);
+$smooth-shadow: 0 16px 16px rgba(0,0,0,0.11), 
+0 32px 32px rgba(0,0,0,0.11),
+0 64px 64px rgba(0,0,0,0.11);
+
+// Breakpoints
+$xs: 320px;
+$sm: 800px;
+$md: 1024px;
+$l: 1536px;

@@ -1,0 +1,42 @@
+@import '/src/templates/constants.scss';
+
+
+.grid-tile {
+  height: 500px;
+  margin: 40px 30px;
+  box-sizing: border-box;
+  padding: 70px;
+  background: $primary-gradient;
+  mix-blend-mode: normal;
+  border-radius: 19px;
+  box-shadow: $smooth-shadow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform ease-in-out .2s;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  h3 {
+    font-size: 63px;
+    font-weight: 600;
+    width: 70%;
+  }
+
+  p {
+    padding: 15px 0 25px 0;
+    font-size: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .basic-button {
+    font-size: 18px;
+  }
+          
+}

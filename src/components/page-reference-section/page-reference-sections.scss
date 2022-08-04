@@ -1,0 +1,33 @@
+@import '/src/templates/constants.scss';
+
+
+.page-reference {
+  max-width: 70%;
+  padding: 100px 50px;
+  h2 {
+    font-weight: 900;
+    font-size: 63px;
+    line-height: 120%;
+    transition: color ease-in-out .2s;
+  }
+  p {
+    padding: 40px 0;
+    font-size: 24px;
+    line-height: 29px;
+    transition: color ease-in-out .2s;
+  }
+
+  .basic-button {
+    font-size: 18px;
+  }
+}
+
+
+
+@media only screen and (max-width: $sm) {
+  .page-reference {
+    max-width: 100%;
+    h2 { font-size: 42px; }
+    p { font-size: 18px; }
+  }
+}
