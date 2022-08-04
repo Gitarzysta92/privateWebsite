@@ -6,17 +6,15 @@ export enum ThemeType {
 }
 
 export interface IUseThemeContext {
-  theme: ThemeType;
+  theme: ThemeType | string;
   toggleTheme: Function;
   componentMounted: boolean;
 }
 
 export const useTheme = (): IUseThemeContext => {
-  const localTheme = window.localStorage.getItem('theme');
-  const [theme, setTheme] = useState(localTheme || ThemeType.light);
+  const [theme, setTheme] = useState(typeof window !== 'undefined' ? window: ThemeType.light);
   const [componentMounted, setComponentMounted] = useState(false);
   const toggleTheme = () => {
-    console.log(theme);
     if (theme === ThemeType.light) {
       window.localStorage.setItem('theme', ThemeType.dark);
       setTheme(ThemeType.dark);
@@ -37,5 +35,5 @@ export const useTheme = (): IUseThemeContext => {
     setComponentMounted(true);
   }, []);
   
-  return { theme, toggleTheme, componentMounted }
+  return { theme , toggleTheme, componentMounted }
 };
