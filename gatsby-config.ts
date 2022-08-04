@@ -15,9 +15,9 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
+    "gatsby-plugin-fontawesome-css",
     "gatsby-plugin-sass",
     "gatsby-plugin-web-font-loader",
-    "gatsby-plugin-fontawesome-css",
     {
       resolve: "gatsby-plugin-breakpoints",
       options: {

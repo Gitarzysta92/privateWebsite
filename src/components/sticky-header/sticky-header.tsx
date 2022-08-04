@@ -10,7 +10,7 @@ export enum StickyHeaderState {
 
 
 export default function StickyHeader(props: PropsWithChildren<any>): ReactElement | null {
-  const svp = typeof scrollY !== 'undefined' ? scrollY : null;
+  const svp = typeof scrollY !== 'undefined' ? scrollY : 0;
   const [state, setState] = useState(svp != 0 ? StickyHeaderState.sticky : StickyHeaderState.hidden);
   
   const stickyTreshold = 200; 
@@ -20,9 +20,9 @@ export default function StickyHeader(props: PropsWithChildren<any>): ReactElemen
   const handleScroll = () => {
     
     let newState;
-    const directionUp = prevPosition.current! > svp!;
+    const directionUp = prevPosition.current! > scrollY!;
       
-    if (directionUp && svp! > stickyTreshold) {
+    if (directionUp && scrollY! > stickyTreshold) {
       newState = StickyHeaderState.sticky;
     } else {
       newState = StickyHeaderState.hidden;
@@ -33,7 +33,7 @@ export default function StickyHeader(props: PropsWithChildren<any>): ReactElemen
       prevState.current = newState
     }
 
-    prevPosition.current = svp;
+    prevPosition.current = scrollY;
   };
 
   useEffect(() => {
