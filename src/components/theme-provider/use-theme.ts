@@ -12,7 +12,7 @@ export interface IUseThemeContext {
 }
 
 export const useTheme = (): IUseThemeContext => {
-  const [theme, setTheme] = useState(typeof window !== 'undefined' ? window: ThemeType.light);
+  const [theme, setTheme] = useState(typeof window !== 'undefined' ? window.localStorage.getItem('theme')!: ThemeType.light);
   const [componentMounted, setComponentMounted] = useState(false);
   const toggleTheme = () => {
     if (theme === ThemeType.light) {
