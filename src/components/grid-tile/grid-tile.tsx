@@ -7,15 +7,17 @@ export interface IGridTile {
   title: string;
   subtitle: string;
   button: IBasicButton
+  backgroundImage?: string;
 }
 
-export default function GridTile({ data }: { data: IGridTile }): ReactElement {
+export default function GridTile({ data, wide, dimmed }: { data: IGridTile, wide?: boolean, dimmed?: boolean }): ReactElement {
 
   return (
-    <div className={`grid-tile`}>
+    <div className={`grid-tile ${wide ? 'wide' : ''} ${dimmed ? 'dimmed' : ''}`}>
       <h3>{data.title}</h3>
       <p>{data.subtitle}</p>
       <BasicButton data={data.button}></BasicButton>
+      { data.backgroundImage ? <div className="background-image-container" style={{ backgroundImage: `url(${data.backgroundImage})` }} /> : <></> }
     </div>
   )
 }

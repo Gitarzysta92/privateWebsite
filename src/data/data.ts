@@ -88,11 +88,32 @@ export const gridSectionHeader: ISectionHeader = {
   faIcon: "fa-solid fa-chevron-down"
 }
 
+
+export const nextProjectGridTile: IGridTile = {
+  title: "Project idea?",
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  button: {
+    label: "Contact",
+    link: ""
+  },
+}
+
 export const cryptoAlertGridTile: IGridTile = {
   title: "Crypto Alert.",
   subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
   button: {
     label: "Read more",
     link: ""
-  }
+  },
+  backgroundImage: "/images/crypto-alert.jpg"
+}
+
+export const hexGridTile: IGridTile = {
+  title: "Hex chess.",
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  button: {
+    label: "Read more",
+    link: ""
+  },
+  backgroundImage: "/images/hex.jpg"
 }

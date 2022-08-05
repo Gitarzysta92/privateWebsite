@@ -2,6 +2,7 @@
 
 
 .grid-tile {
+  position: relative;
   height: 500px;
   margin: 40px 30px;
   box-sizing: border-box;
@@ -10,6 +11,7 @@
   mix-blend-mode: normal;
   border-radius: 19px;
   box-shadow: $smooth-shadow;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -20,6 +22,16 @@
 
   &:hover {
     transform: scale(1.01);
+  }
+
+  &.wide {
+
+  }
+
+  &.dimmed {
+    .background-image-container {
+      opacity: .7;
+    }
   }
 
   h3 {
@@ -37,6 +49,16 @@
 
   .basic-button {
     font-size: 18px;
+  }
+
+  .background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
   }
           
 }

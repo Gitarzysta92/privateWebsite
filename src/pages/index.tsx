@@ -4,10 +4,11 @@ import DefaultTemplate from "../templates/default-template";
 import GridTile from "../components/grid-tile/grid-tile";
 import PageReferenceSection from "../components/page-reference-section/page-reference-section";
 import SectionHeader from "../components/section-header/section-header";
-import { aboutPageReferenceSection, cryptoAlertGridTile, gridSectionHeader } from "../data/data";
-import "@fontsource/lato"
-import "@fontsource/lato/700.css"
-import "@fontsource/lato/900.css"
+import { aboutPageReferenceSection, cryptoAlertGridTile, gridSectionHeader, hexGridTile, nextProjectGridTile } from "../data/data";
+import ParallaxContainer from "../components/parallax-container/parallax-container";
+import "@fontsource/lato";
+import "@fontsource/lato/700.css";
+import "@fontsource/lato/900.css";
 
 
 
@@ -15,6 +16,9 @@ import "@fontsource/lato/900.css"
 const IndexPage = (props: PageProps) => {
   return (
     <DefaultTemplate>
+      <ParallaxContainer>
+        <div className="blob-bg"></div>
+      </ParallaxContainer>
       <section className="container page-reference-section">
         <div className="row">
           <div className="col-12">
@@ -30,13 +34,13 @@ const IndexPage = (props: PageProps) => {
         </div>
         <div className="row">
           <div className="col-12 col-lg-6">
-            <GridTile data={cryptoAlertGridTile}></GridTile>
+            <GridTile data={nextProjectGridTile}></GridTile>
           </div>
           <div className="col-12 col-lg-6">
             <GridTile data={cryptoAlertGridTile}></GridTile>
           </div>
           <div className="col-12">
-            <GridTile data={cryptoAlertGridTile}></GridTile>
+            <GridTile wide dimmed data={hexGridTile}></GridTile>
           </div>
         </div>
       </section>
