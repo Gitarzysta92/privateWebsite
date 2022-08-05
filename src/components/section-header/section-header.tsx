@@ -10,11 +10,8 @@ export interface ISectionHeader {
 }
 
 export default function SectionHeader({ data }: { data: ISectionHeader }): ReactElement {
-
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={`${theme} section-header`}>
+    <div className={`section-header`}>
       <h4>{data.title} <i className={data.faIcon}></i></h4>
       <p>{data.subtitle}</p>
     </div>

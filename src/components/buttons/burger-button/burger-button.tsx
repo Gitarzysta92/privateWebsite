@@ -8,7 +8,6 @@ import "./burger-button.scss";
 export default function BurgerButton({ onClick }: { onClick: any }): ReactElement  {
   const [animate, setState] = useState(false)
   const buttonRef = useRef<HTMLDivElement>(null);
-  const { theme } = useContext(ThemeContext);
 
   const startAnimation = () => setState(true);
   const cancelAnimation = () => setState(false);
@@ -22,7 +21,7 @@ export default function BurgerButton({ onClick }: { onClick: any }): ReactElemen
   }, []);
 
   return (
-    <div ref={buttonRef} className={`${animate ? 'animate ' : ''}burger-button ${theme}`} onClick={e => (startAnimation(), onClick(e))}>
+    <div ref={buttonRef} className={`${animate ? 'animate ' : ''}burger-button`} onClick={e => (startAnimation(), onClick(e))}>
       <div></div>
       <div></div>
       <div></div>

@@ -1,0 +1,85 @@
+
+a:hover, a:not([href]):not([class]):hover{
+  color: $theme-orange;
+}
+
+.light-theme  {
+  background-color: $background-secondary-light-theme;
+  header .sticky {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .logo-wrapper::after {
+    background-color: $background-secondary-light-theme;
+  }
+
+  header .slide-pane {
+    background-color: $background-secondary-light-theme;
+  }
+  
+  header .burger-button {
+    & > div { background-color: $text-primary-light-theme; }
+  }
+  header .cross-button {
+    color: $text-primary-light-theme;
+  }
+  
+  .navigation-wrapper { 
+    color: $text-primary-light-theme; 
+    li.solid, li li {
+      color: $text-primary-dark-theme 
+    } 
+  }
+
+  .navigation-wrapper.dark-theme, .navigation-wrapper.light-theme  {
+    .solid, .submenu {
+      color: $text-secondary-dark-theme;
+      background-color: $background-quaternary-dark-theme;
+
+      &::after {
+        border-color: $background-quaternary-dark-theme transparent;
+      }
+    }
+  }
+
+  .page-reference-section {
+    h2 { color: $text-primary-light-theme; }
+    p { color: $text-secondary-light-theme; }
+    .basic-button { 
+      color: $background-secondary-light-theme;
+      background-color: $text-primary-light-theme;
+    }
+  }
+
+  .projects-grid-section {
+    h2 { color: $text-primary-light-theme; }
+    p { color: $text-primary-light-theme; }
+    .basic-button { 
+      color: $background-secondary-light-theme;
+      background-color: $text-primary-light-theme;
+    }
+
+    .section-header {
+      h4 { color: $text-primary-light-theme; }
+      p { color: $text-secondary-light-theme; }
+    }
+  }
+
+  footer {
+    background-color: #181a1c;
+    color: $text-primary-dark-theme;
+
+    .list-column span {
+      color: $background-secondary-dark-theme;
+    }
+
+    .list-column li {
+      color: $text-tertiary-dark-theme;;
+    }
+
+    .bottom-bar {
+      color: $background-secondary-dark-theme;
+      background-color: $background-quaternary-dark-theme;
+    }
+  }
+}

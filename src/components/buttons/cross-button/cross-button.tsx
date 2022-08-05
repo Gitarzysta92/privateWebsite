@@ -4,10 +4,8 @@ import "./cross-button.scss";
 
 
 export default function CrossButton({ onClick }: { onClick: any }): ReactElement  {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={`cross-button ${theme}`} onClick={onClick}>
+    <div className={`cross-button`} onClick={onClick}>
       <i className="fa-solid fa-xmark"></i>
     </div>
   )

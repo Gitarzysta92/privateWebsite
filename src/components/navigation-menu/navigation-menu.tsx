@@ -15,10 +15,8 @@ export enum NavigationMenuType {
 export default function NavigationMenu({ data, type }: { data: INavigationMenuItem[], type?: NavigationMenuType })  {
   let i = 0;
 
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={`${theme} navigation-wrapper`}>
+    <div className={`navigation-wrapper`}>
       <ul className={type === NavigationMenuType.vertical ? "vertical" : "horizontal"}>
         { generateMenuStructure(data, i) }
       </ul>

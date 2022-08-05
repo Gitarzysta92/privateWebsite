@@ -11,10 +11,8 @@ export interface IGridTile {
 
 export default function GridTile({ data }: { data: IGridTile }): ReactElement {
 
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={`${theme} grid-tile`}>
+    <div className={`grid-tile`}>
       <h3>{data.title}</h3>
       <p>{data.subtitle}</p>
       <BasicButton data={data.button}></BasicButton>

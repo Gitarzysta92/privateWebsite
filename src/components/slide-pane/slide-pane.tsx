@@ -4,9 +4,6 @@ import { ThemeContext } from "../theme-provider/theme-provider";
 import "./slide-pane.scss";
 
 export default function SlidePane({ children, isOpen }: { children: JSX.Element[] | JSX.Element, isOpen: boolean }): ReactElement {
-
-  const { theme } = useContext(ThemeContext);
-
   return (
     <CSSTransition
       unmountOnExit
@@ -14,7 +11,7 @@ export default function SlidePane({ children, isOpen }: { children: JSX.Element[
       timeout={1000}
       classNames="slide-pane">
 
-        <div className={`${theme} slide-pane`}>
+        <div className={`slide-pane`}>
           {children}
         </div>
 

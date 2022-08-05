@@ -23,12 +23,4 @@
   &:hover::after {
     transform: scale(0.4); 
   }
-
-  &.dark-theme::after {
-    background-color: $background-tertiary-dark-theme;
-  }
-
-  &.light-theme::after {
-    background-color: $background-secondary-light-theme;
-  }
 }

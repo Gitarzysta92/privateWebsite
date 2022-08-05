@@ -11,10 +11,8 @@ export interface IPageReferenceSection {
 
 export default function PageReferenceSection({ data }: { data: IPageReferenceSection }): ReactElement {
 
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={`${theme} page-reference`}>
+    <div className={`page-reference`}>
       <h2>{data.title}</h2>
       <p>{data.subtitle}</p>
       <BasicButton data={data.button}></BasicButton>

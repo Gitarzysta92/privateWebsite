@@ -1,4 +1,6 @@
 @import '/src/templates/constants.scss';
+@import 'src/templates/dark-theme.scss';
+@import 'src/templates/light-theme.scss';
 
 html, body {
   font-family: 'Lato';
@@ -9,66 +11,6 @@ a:hover, a:not([href]):not([class]):hover{
   color: $theme-orange;
 }
 
-
-.theme-provider-wrapper {
-  transition: background-color ease-in-out .2s;
-}
-
-.theme-provider-wrapper.light-theme  {
-  background-color: $background-secondary-light-theme;
-  header .sticky {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-}
-
-.theme-provider-wrapper.dark-theme {
-  background-color: $background-tertiary-dark-theme;
-  header .sticky {
-    background-color: rgba(25, 29, 32, 0.95);
-  }
-}
-
-
-header .slide-pane.dark-theme {
-  background-color: $background-tertiary-dark-theme;
-
-  hr {
-    border-top-color: $text-secondary-dark-theme;
-  }
-}
-
-header .slide-pane.light-theme {
-  background-color: $background-secondary-light-theme;
-}
-
-header .burger-button {
-  &.light-theme div {
-    background-color: $text-primary-light-theme;
-  }
-}
-header .cross-button {
-  &.light-theme {
-    color: $text-primary-light-theme;
-  }
-}
-
-.navigation-wrapper { 
-  &.light-theme { 
-    color: $text-primary-light-theme; 
-    li.solid, li li {
-      color: $text-primary-dark-theme 
-    } 
-  }
-  &.dark-theme { 
-    color: $text-primary-dark-theme;
-    li.solid, li li {
-      color: $text-primary-dark-theme 
-    } 
-  }
-}
-
-
-
 .navigation-wrapper.dark-theme, .navigation-wrapper.light-theme  {
   .solid, .submenu {
     color: $text-secondary-dark-theme;
@@ -77,68 +19,5 @@ header .cross-button {
     &::after {
       border-color: $background-quaternary-dark-theme transparent;
     }
-  }
-}
-
-
-.page-reference-section {
-  .dark-theme {
-    h2 { color: $text-primary-dark-theme; }
-    p { color: $text-secondary-dark-theme; }
-    .basic-button { 
-      color: $background-primary-dark-theme;
-      background-color: $text-primary-dark-theme;
-    }
-  }
-
-  .light-theme {
-    h2 { color: $text-primary-light-theme; }
-    p { color: $text-secondary-light-theme; }
-    .basic-button { 
-      color: $background-secondary-light-theme;
-      background-color: $text-primary-light-theme;
-    }
-  }
-}
-
-.projects-grid-section {
-  .light-theme, .dark-theme {
-    h2 { color: $text-primary-light-theme; }
-    p { color: $text-primary-light-theme; }
-    .basic-button { 
-      color: $background-secondary-light-theme;
-      background-color: $text-primary-light-theme;
-    }
-  }
-
-
-  .section-header.dark-theme {
-    h4 { color: $text-primary-dark-theme; }
-    p { color: $text-secondary-dark-theme; }
-  }
-
-  .section-header.light-theme {
-    h4 { color: $text-primary-light-theme; }
-    p { color: $text-secondary-light-theme; }
-  }
-  
-}
-
-
-footer {
-  background-color: #181a1c;
-  color: $text-primary-dark-theme;
-
-  .list-column span {
-    color: $background-secondary-dark-theme;
-  }
-
-  .list-column li {
-    color: $text-tertiary-dark-theme;;
-  }
-
-  .bottom-bar {
-    color: $background-secondary-dark-theme;
-    background-color: $background-quaternary-dark-theme;
   }
 }

@@ -18,8 +18,13 @@ button.theme-toggle {
       transition: all ease-in-out .2s;
     }
   }
+}
 
-  &.light-theme {
+.light-theme {
+  button.theme-toggle {
+    background-color: $background-primary-light-theme;
+    i { color: $text-primary-light-theme }
+
     & > div {
       transform: translateX(23px);
     } 
@@ -30,8 +35,13 @@ button.theme-toggle {
       opacity: 0;
     }
   }
+}
 
-  &.dark-theme {
+.dark-theme {
+  button.theme-toggle {
+    background-color: $background-secondary-dark-theme;
+    i { color: $text-primary-dark-theme }
+
     & > div {
       transform: translateX(0px);
     } 
@@ -42,16 +52,4 @@ button.theme-toggle {
       opacity: 1;
     }
   }
-
-  &.light-theme {
-    background-color: $background-primary-light-theme;
-    i { color: $text-primary-light-theme }
-  }
-
-  &.dark-theme {
-    background-color: $background-secondary-dark-theme;
-    i { color: $text-primary-dark-theme }
-  }
-
-
 }

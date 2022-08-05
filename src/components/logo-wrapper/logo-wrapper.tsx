@@ -5,7 +5,5 @@ import "./logo-wrapper.scss"
 
 export default function LogoWrapper(): ReactElement {
 
-  const { theme } = useContext(ThemeContext);
-
-  return (<div className={`logo-wrapper ${theme}`}></div>);
+  return (<div className={`logo-wrapper`}></div>);
 }

@@ -1,0 +1,72 @@
+
+
+a:hover, a:not([href]):not([class]):hover{
+  color: $theme-orange;
+}
+
+
+.dark-theme {
+  transition: background-color ease-in-out .2s;
+
+  .logo-wrapper::after {
+    background-color: $background-tertiary-dark-theme;
+  }
+
+  background-color: $background-tertiary-dark-theme;
+  header .sticky {
+    background-color: rgba(25, 29, 32, 0.95);
+  }
+
+  header .slide-pane {
+    background-color: $background-tertiary-dark-theme;
+    hr { border-top-color: $text-secondary-dark-theme; }
+  }
+
+  .navigation-wrapper { 
+    color: $text-primary-dark-theme;
+    li.solid, li li {
+      color: $text-primary-dark-theme 
+    } 
+  }
+
+  .page-reference-section {
+    h2 { color: $text-primary-dark-theme; }
+    p { color: $text-secondary-dark-theme; }
+    .basic-button { 
+      color: $background-primary-dark-theme;
+      background-color: $text-primary-dark-theme;
+    }
+  }
+
+  .projects-grid-section {
+    h2 { color: $text-primary-light-theme; }
+    p { color: $text-primary-light-theme; }
+    .basic-button { 
+      color: $background-secondary-light-theme;
+      background-color: $text-primary-light-theme;
+    }
+    
+    .section-header {
+      h4 { color: $text-primary-dark-theme; }
+      p { color: $text-secondary-dark-theme; }
+    }  
+  }
+  
+  footer {
+    background-color: #181a1c;
+    color: $text-primary-dark-theme;
+  
+    .list-column span {
+      color: $background-secondary-dark-theme;
+    }
+  
+    .list-column li {
+      color: $text-tertiary-dark-theme;;
+    }
+  
+    .bottom-bar {
+      color: $background-secondary-dark-theme;
+      background-color: $background-quaternary-dark-theme;
+    }
+  }
+}
