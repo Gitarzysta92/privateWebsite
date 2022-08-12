@@ -4,6 +4,14 @@
 .grid-tile {
   position: relative;
   height: 500px;
+
+  @media only screen and (max-width: $xmd) {
+    height: 600px;
+  }
+
+  @media only screen and (max-width: $sm) {
+    height: auto;
+  }
   margin: 40px 30px;
   box-sizing: border-box;
   padding: 70px;
@@ -22,10 +30,6 @@
 
   &:hover {
     transform: scale(1.01);
-  }
-
-  &.wide {
-
   }
 
   &.dimmed {

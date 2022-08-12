@@ -1,6 +1,13 @@
+@import '/src/templates/constants.scss';
+
+
 .section-header {
   padding: 50px;
   text-align: center;
+
+  @media only screen and (max-width: $sm) {
+    padding: 50px 0px;
+  }
 
   h4 {
     font-weight: 900;

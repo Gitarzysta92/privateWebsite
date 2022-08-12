@@ -53,42 +53,5 @@ a:hover, a:not([href]):not([class]):hover{
   transform: translate(100px);
 }
 
-.blob-bg {
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/blob.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  z-index: -1;
-  animation-name: example3;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  transition: all ease-in-out .2s;
-}
-
-
-@keyframes example3 {
-  from {
-    transform: skew(0deg, 0deg);
-  }
-
-  25% {
-    transform: skew(5deg, -5deg);
-  }
-
-  50% {
-    transform: skew(9deg, -1deg);
-  }
-
-  75% {
-    transform: skew(-5deg, 8deg);
-  }
-
-  to {
-    transform: skew(0deg, 0deg);
-  }
-}
-
-
 
 

@@ -43,6 +43,7 @@
       padding: 20px 30px;
       background-color: black;
       border-radius: 10px;
+      z-index: 9999;
 
       &:after {
         content: '';

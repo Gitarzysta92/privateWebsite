@@ -15,11 +15,7 @@ import CrossButton from "../components/buttons/cross-button/cross-button";
 export default function HeaderTemplate(): ReactElement | null  {
   const { toggleTheme } = useContext(ThemeContext);
   const [ slidePaneState, setState ] = useState(false);
-  const breakpoints = useBreakpoint();
-
-  const nav = breakpoints.sm ?
-    <BurgerButton onClick={() => setState(true)}></BurgerButton> :
-    <NavigationMenu data={mainMenu}></NavigationMenu>;
+  const breakpoints = useBreakpoint();    
 
   const slidePane = breakpoints.sm ?
     (<SlidePane isOpen={slidePaneState}>
@@ -51,7 +47,9 @@ export default function HeaderTemplate(): ReactElement | null  {
             <div className="row">
               <div className="col-12">
                 <div className="header-bar d-flex justify-content-between">
-                  <LogoWrapper></LogoWrapper>{ nav }
+                  <LogoWrapper></LogoWrapper>
+                  <BurgerButton onClick={() => setState(true)}></BurgerButton>
+                  <NavigationMenu data={mainMenu}></NavigationMenu>;
                 </div>
               </div>
             </div>
@@ -63,7 +61,9 @@ export default function HeaderTemplate(): ReactElement | null  {
         <div className="row">
           <div className="col-12">
             <div className="header-bar d-flex justify-content-between">
-              <LogoWrapper></LogoWrapper>{ nav }
+              <LogoWrapper></LogoWrapper>
+              <BurgerButton onClick={() => setState(true)}></BurgerButton>
+              <NavigationMenu data={mainMenu}></NavigationMenu>
             </div>
           </div>
         </div>
