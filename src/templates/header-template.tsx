@@ -49,7 +49,7 @@ export default function HeaderTemplate(): ReactElement | null  {
                 <div className="header-bar d-flex justify-content-between">
                   <LogoWrapper></LogoWrapper>
                   <BurgerButton onClick={() => setState(true)}></BurgerButton>
-                  <NavigationMenu data={mainMenu}></NavigationMenu>;
+                  <NavigationMenu data={mainMenu}></NavigationMenu>
                 </div>
               </div>
             </div>

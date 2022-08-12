@@ -47,29 +47,29 @@ export const footer: IFooter = {
     title: "Site map",
     items: [
       { title: "Home", link: "/" },
-      { title: "About me", link: "/" },
-      { title: "Contact", link: "/" }
+      { title: "About me", link: "/about-me" },
+      { title: "Contact", link: "/contact" }
     ]
   },
   second: {
     title: "Projects",
     items: [
       { title: "Hex chess", link: "/" },
-      { title: "Crypto alert", link: "/" }
+      { title: "Crypto alert", link: "https://white-desert-0132b9510.1.azurestaticapps.net/dashboard" }
     ]
   },
   third: {
     title: "Social media",
     items: [
-      { title: "Facebook", link: "/" },
-      { title: "Linkedin", link: "/" },
-      { title: "Github", link: "/" }
+      { title: "Facebook", link: "https://www.facebook.com/asdasd.gffgdfg" },
+      { title: "Linkedin", link: "https://www.linkedin.com/in/micha%C5%82-%C5%82ukasiewicz-6bb38361/" },
+      { title: "Github", link: "https://github.com/Gitarzysta92" }
     ]
   },
   fourth: {
     title: "Contact",
     items: [
-      { title: "m.lukasiewicz92@gmail.com", link: "/" },
+      { title: "contact@michallukasiewicz.com", link: "mailto: contact@michallukasiewicz.com" },
     ]
   },
   bottomBar: "Copyright 2022"
@@ -82,7 +82,7 @@ export const aboutPageReferenceSection: IPageReferenceSection = {
   subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
   button: {
     label: "About me",
-    link: ""
+    link: "/about-me"
   }
 }
 
@@ -98,7 +98,7 @@ export const nextProjectGridTile: IGridTile = {
   subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
   button: {
     label: "Contact",
-    link: ""
+    link: "/contact"
   },
 }
 
@@ -107,7 +107,7 @@ export const cryptoAlertGridTile: IGridTile = {
   subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
   button: {
     label: "Read more",
-    link: ""
+    link: "https://white-desert-0132b9510.1.azurestaticapps.net/dashboard"
   },
   backgroundImage: "/images/crypto-alert.jpg"
 }
@@ -141,7 +141,7 @@ export const contactSection = {
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu laoreet urna, ullamcorper convallis lorem. Integer faucibus tortor quis iaculis sagittis. Proin condimentum pretium ipsum nec venenatis. Sed mattis ornare cursus. Donec fermentum, nunc placerat condimentum cursus, tortor lorem tempor dolor, sit amet placerat nisi elit a mauris. Vivamus vitae sollicitudin eros. Nulla justo ex, lobortis posuere facilisis vitae, finibus et quam.",
   button: {
     label: "Contact me",
-    link: ""
+    link: "/contact"
   },
 }
 
@@ -207,5 +207,5 @@ export const testimontialSection: ITestimontialSlider = {
 
 export const contactData = {
   title: "Lorem ipsum dolor sit amet",
-  email: "m.lukasiewicz92@gmail.com"
+  email: "contact@michallukasiewicz.com"
 }
