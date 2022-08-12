@@ -15,9 +15,9 @@ import CrossButton from "../components/buttons/cross-button/cross-button";
 export default function HeaderTemplate(): ReactElement | null  {
   const { toggleTheme } = useContext(ThemeContext);
   const [ slidePaneState, setState ] = useState(false);
-  const breakpoints = useBreakpoint();    
+  const breakpoints = useBreakpoint();
 
-  const slidePane = breakpoints.sm ?
+  const slidePane = breakpoints.xmd ?
     (<SlidePane isOpen={slidePaneState}>
       <div className="container">
         <div className="row">
@@ -34,12 +34,9 @@ export default function HeaderTemplate(): ReactElement | null  {
   
   return (
     <header>
-
-      { !breakpoints.sm ?
-        <div className="toggle-wrapper">
-          <ThemeToggle toggleTheme={toggleTheme}></ThemeToggle>
-        </div>
-        : null}
+      <div className="toggle-wrapper">
+        <ThemeToggle toggleTheme={toggleTheme}></ThemeToggle>
+      </div>
 
       <StickyHeader>
         <div className="sticky">

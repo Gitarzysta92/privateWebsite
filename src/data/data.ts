@@ -25,12 +25,12 @@ export const mainMenu: INavigationMenuItem[] = [
     childerns: [
       { 
         title: "Crypto alert",
-        link: "/projects/crypto-alert",
+        link: "https://white-desert-0132b9510.1.azurestaticapps.net/dashboard",
         appearance: "link",
       },
       { 
         title: "Hex chess",
-        link: "/projects/hex-chess",
+        link: "",
         appearance: "link",
       }
     ]

@@ -68,3 +68,9 @@ header {
     .navigation-wrapper { display: none; }
   }
 }
+
+.toggle-wrapper {
+  @media only screen and (max-width: $sm) {
+   display: none;
+  }
+}
