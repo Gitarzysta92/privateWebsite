@@ -1,4 +1,4 @@
-
+@import '/src/templates/constants.scss';
 
 a:hover, a:not([href]):not([class]):hover{
   color: $theme-orange;
@@ -72,6 +72,87 @@ a:hover, a:not([href]):not([class]):hover{
     .bottom-bar {
       color: $background-secondary-dark-theme;
       background-color: $background-quaternary-dark-theme;
+    }
+  }
+
+  .introduce-section {
+    h2 { color: $text-primary-dark-theme; }
+    p { color: $text-secondary-dark-theme; }
+  }
+
+  .tech-stack-section {
+    .row {
+      background-color: $background-primary-dark-theme;
+      color: $text-primary-dark-theme;
+    }
+  }
+
+  .experience-section {
+    h4, h3 {
+      small {
+        opacity: .5;
+        color: $text-secondary-dark-theme; 
+      } 
+      color: $text-primary-dark-theme; 
+    }
+    p { color: $text-secondary-dark-theme; }
+
+
+    button  {
+      color: $text-secondary-dark-theme; 
+      &:hover { color: $theme-orange; }
+    }
+    .timeline-container .timeline-wrapper {
+
+      .timeline-item.active {
+        .timeline-indicator {
+          background: $primary-gradient;
+          border-color: $background-primary-dark-theme;
+        }
+      }
+
+      .timeline-item {
+        .timeline-indicator {
+          border-color: $text-secondary-dark-theme;
+        }
+      }
+
+      .timeline-item-date {
+        color: $text-secondary-dark-theme; 
+      }
+
+      .timeline-indicator::after, .timeline-indicator::before {
+        background-color: $background-primary-dark-theme;
+      }
+
+    }
+  }
+
+  .testimonial-section {
+    .row {
+      background-color: $background-primary-dark-theme;
+      color: $text-secondary-dark-theme;
+
+      button  {
+        color: $text-secondary-dark-theme; 
+        &:hover { color: $theme-orange; }
+      }
+    }
+  }
+
+  .contact-reference-section {
+    p {color: $text-secondary-dark-theme; }
+    .basic-button { 
+      color: $text-primary-light-theme;
+      background-color: $theme-orange;
+    }
+  }
+
+  .contact-section {
+    color: $text-secondary-dark-theme;
+
+    h1, i {
+      color: $text-primary-dark-theme;
     }
   }
 }

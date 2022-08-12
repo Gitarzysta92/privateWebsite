@@ -1,0 +1,114 @@
+@import 'src/templates/constants.scss';
+
+.introduce-section {
+  padding: 100px 30px;
+  .introduce-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      position: relative;
+      img {
+        max-width: 300px;
+        border-radius: 100%;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background: $primary-gradient;
+        transform: scale(1.07);
+        z-index: -1;
+      }
+    }
+  }
+
+  .introduce-text-wrapper {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-weight: 600;
+    }
+  }
+
+
+  @media only screen and (max-width: $sm) {
+    .introduce-text-wrapper {
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+}
+
+.tech-stack-section {
+  padding: 50px;
+  .row {
+    padding: 70px 0px;
+    border-radius: 19px;
+    box-shadow: $smooth-shadow;
+    background-color: $background-secondary-light-theme;
+    background-image: url('/images/wave.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+  .tech-stack-text-wrapper {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 { margin-bottom: 0; }
+  }
+
+  .tech-stack-pills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+      padding: 5px 20px;
+      margin: 10px;
+      border-radius: 25px;
+      border: 2px solid $theme-green;
+    }
+  }
+}
+
+.experience-section {
+  padding: 100px 50px 50px 50px;
+}
+
+
+.testimonial-section {
+  padding: 100px 50px;
+
+  .row {
+    padding: 70px 0px;
+    border-radius: 19px;
+    box-shadow: $smooth-shadow;
+    background-color: $background-secondary-light-theme;
+  }
+}
+
+
+.contact-reference-section {
+  max-width: 900px;
+  padding: 100px 50px 50px 50px;
+  text-align: center;
+  p {
+    font-style: italic;
+    margin-bottom: 60px;
+  }
+
+  a {
+    max-width: 400px;
+    text-align: center;
+  }
+}

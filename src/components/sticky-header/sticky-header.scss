@@ -1,3 +1,7 @@
+.sticky {
+  z-index: 100;
+}
+
 .sticky-header-enter {
   opacity: 0;
   transform: translate(0, -100%);

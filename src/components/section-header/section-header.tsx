@@ -1,5 +1,4 @@
-import React, { ReactElement, useContext } from "react"
-import { ThemeContext } from "../theme-provider/theme-provider";
+import React, { ReactElement  } from "react"
 import './section-header.scss';
 
 

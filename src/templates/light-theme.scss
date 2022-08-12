@@ -1,20 +1,25 @@
+@import '/src/templates/constants.scss';
 
 a:hover, a:not([href]):not([class]):hover{
   color: $theme-orange;
 }
 
 .light-theme  {
-  background-color: $background-secondary-light-theme;
+  background-color: $background-primary-light-theme;
   header .sticky {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(241, 241, 241, 0.9);
   }
 
   .logo-wrapper::after {
-    background-color: $background-secondary-light-theme;
+    background-color: $background-primary-light-theme;
   }
 
   header .slide-pane {
     background-color: $background-secondary-light-theme;
+  }
+
+  header button.theme-toggle {
+    background-color: $text-tertiary-dark-theme;
   }
   
   header .burger-button {
@@ -65,6 +70,12 @@ a:hover, a:not([href]):not([class]):hover{
     }
   }
 
+  .introduce-section {
+    h2 { color: $text-primary-light-theme; }
+    p { color: $text-secondary-light-theme; }
+  }
+
+
   footer {
     background-color: #181a1c;
     color: $text-primary-dark-theme;
@@ -82,4 +93,63 @@ a:hover, a:not([href]):not([class]):hover{
       background-color: $background-quaternary-dark-theme;
     }
   }
+
+  .experience-section {
+    h4, h3 {
+      small {
+        opacity: .5;
+        color: $text-secondary-light-theme; 
+      } 
+      color: $text-primary-light-theme; 
+    }
+    p { color: $text-secondary-light-theme; }
+
+
+    button  {
+      color: $text-secondary-light-theme; 
+      &:hover { color: $theme-orange; }
+    }
+    .timeline-container .timeline-wrapper {
+
+      .timeline-item.active {
+        .timeline-indicator {
+          background: $primary-gradient;
+          border-color: $background-secondary-light-theme;
+        }
+      }
+
+      .timeline-item {
+        .timeline-indicator {
+          border-color: $text-secondary-light-theme;
+        }
+      }
+
+      .timeline-item-date {
+        color: $text-secondary-light-theme; 
+      }
+
+      .timeline-indicator::after, .timeline-indicator::before {
+        background-color: $text-secondary-dark-theme;
+      }
+
+    }
+  }
+
+  .contact-reference-section {
+    p {color: $text-secondary-light-theme; }
+    .basic-button { 
+      color: $text-primary-light-theme;
+      background-color: $theme-orange;
+    }
+  }
+
+  .contact-section {
+    color: $text-secondary-light-theme;
+
+    h1, i {
+      color: $text-primary-light-theme;
+    }
+  }
+
+ 
 }
