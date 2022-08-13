@@ -75,6 +75,16 @@ a:hover, a:not([href]):not([class]):hover{
     }
   }
 
+
+  .articles-section {
+    .section-header {
+      h4 { color: $text-primary-dark-theme; }
+      p { color: $text-secondary-dark-theme; }
+    }
+  }
+
+  // About page
+
   .introduce-section {
     h2 { color: $text-primary-dark-theme; }
     p { color: $text-secondary-dark-theme; }

@@ -4,6 +4,7 @@ import { INavigationMenuItem } from "../components/navigation-menu/navigation-me
 import { IPageReferenceSection } from "../components/page-reference-section/page-reference-section"
 import { ISectionHeader } from "../components/section-header/section-header"
 import { ITestimontialSlider } from "../components/testimontial-slider/testimontial-slider"
+import { IWordpressNewsfeedConfiguration } from "../components/wordpress-newsfeed/wordpress-newsfeed"
 import { IFooter } from "../templates/footer-template"
 
 
@@ -120,6 +121,16 @@ export const hexGridTile: IGridTile = {
     link: ""
   },
   backgroundImage: "/images/hex.jpg"
+}
+
+export const articlesHeader: ISectionHeader = {
+  title: "Articles",
+  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  faIcon: "fa-solid fa-chevron-down"
+}
+
+export const wordpressNewsfeed: IWordpressNewsfeedConfiguration = {
+  url: "http://www.blog.michallukasiewicz.com/wp-json/wp/v2/posts?_embed"
 }
 
 // About me

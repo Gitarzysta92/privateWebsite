@@ -4,12 +4,13 @@ import DefaultTemplate from "../templates/default-template";
 import GridTile from "../components/grid-tile/grid-tile";
 import PageReferenceSection from "../components/page-reference-section/page-reference-section";
 import SectionHeader from "../components/section-header/section-header";
-import { aboutPageReferenceSection, cryptoAlertGridTile, gridSectionHeader, hexGridTile, nextProjectGridTile } from "../data/data";
+import { aboutPageReferenceSection, articlesHeader, cryptoAlertGridTile, gridSectionHeader, hexGridTile, nextProjectGridTile, wordpressNewsfeed } from "../data/data";
 import ParallaxContainer from "../components/parallax-container/parallax-container";
 import "./index.scss";
 import "@fontsource/lato";
 import "@fontsource/lato/700.css";
 import "@fontsource/lato/900.css";
+import WordpressNewsfeed from "../components/wordpress-newsfeed/wordpress-newsfeed";
 
 
 
@@ -42,6 +43,24 @@ const IndexPage = (props: PageProps) => {
           </div>
           <div className="col-12">
             <GridTile wide dimmed data={hexGridTile}></GridTile>
+          </div>
+        </div>
+      </section>
+      <section className="container-fluid articles-section">
+        <div className="row">
+          <div className="col-12">
+            <SectionHeader data={articlesHeader}></SectionHeader>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <WordpressNewsfeed data={wordpressNewsfeed}></WordpressNewsfeed>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

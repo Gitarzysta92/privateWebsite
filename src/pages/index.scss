@@ -43,3 +43,24 @@
 }
 
 
+.articles-section {
+  padding: 50px;
+
+  .section-header {
+    padding: 100px 0;
+  }
+
+  & > .row:last-child {
+    background: $primary-gradient;
+    box-shadow: $smooth-shadow;
+    border-radius: 19px;
+  }
+
+
+  .basic-button {
+    color: $text-primary-dark-theme;
+    background-color: $text-primary-light-theme;
+  }
+}
+
+
