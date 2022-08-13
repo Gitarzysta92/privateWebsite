@@ -130,7 +130,7 @@ export const articlesHeader: ISectionHeader = {
 }
 
 export const wordpressNewsfeed: IWordpressNewsfeedConfiguration = {
-  url: "http://www.blog.michallukasiewicz.com/wp-json/wp/v2/posts?_embed"
+  url: "https://www.blog.michallukasiewicz.com/wp-json/wp/v2/posts?_embed"
 }
 
 // About me
