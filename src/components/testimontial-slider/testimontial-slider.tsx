@@ -52,6 +52,15 @@ export default function TestimontialSlider({ data }: { data: ITestimontialSlider
       <button onClick={setNextTab}>
         <i className="fa-solid fa-angle-right"></i>
       </button>
+
+      <div className="testimontial-mobile-navigation">
+        <button onClick={setPrevTab}>
+          <i className="fa-solid fa-angle-left"></i>
+        </button>
+        <button onClick={setNextTab}>
+          <i className="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
     </div>
   )
 }

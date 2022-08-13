@@ -7,11 +7,34 @@
   width: 100%;
   overflow: hidden;
   padding: 10px 0;
+
+  
   button {
     padding: 40px;
     background: none;
     border: none;
     font-size: 36px;
+  }
+
+  .testimontial-mobile-navigation {
+    display: none;
+  }
+
+  @media only screen and (max-width: $msm) {
+    padding: 10px 30px;
+    flex-direction: column;
+
+    button {
+      display: none;
+    }
+
+    .testimontial-mobile-navigation {
+      display: flex;
+      justify-content: space-between;
+      button {
+        display: block;
+      }
+    }
   }
 
 }

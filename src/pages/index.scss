@@ -46,6 +46,12 @@
 .articles-section {
   padding: 50px;
 
+
+  @media only screen and (max-width: $msm) {
+    padding: 30px;
+  }
+
+
   .section-header {
     padding: 100px 0;
   }

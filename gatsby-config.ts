@@ -3,6 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const myCustomQueries = {
   xs: '(max-width: 320px)',
+  msm: '(max-width: 400px)',
   sm: '(max-width: 800px)',
   md: '(max-width: 1024px)',
   xmd: '(max-width: 1262px)',
