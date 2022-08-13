@@ -13,6 +13,18 @@
 
   ul.vertical > li {
     display: block;
+
+    a {
+      padding: 20px;
+    }
+
+    &.solid {
+      margin-top: 10px;
+      a {
+        padding: 10px 20px;
+      }
+    
+    }
   }
 
   ul.horizontal > li {
