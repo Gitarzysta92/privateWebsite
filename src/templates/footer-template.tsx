@@ -49,7 +49,11 @@ function generateList(data: IFooterList): ReactElement {
     <div className="list-column">
       <span>{data.title}</span>
       <ul> 
-        {data.items.map((item, index) => { return <li key={index}><Link to={item.link}>{item.title}</Link></li>})}
+        {data.items.map((item, index) => {
+          return <li key={index}>
+            <Link to={item.link} target={item.link?.includes('http') ? "_blank" : "_self"}>{item.title}</Link>
+          </li>
+        })}
       </ul>
     </div>
   )

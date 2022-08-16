@@ -3,9 +3,9 @@
   width: 100%;
   padding: 30px 0;
   h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     small {
-      font-size: 12px;
+      font-size: 0.9rem;
     }
   }
   p {
@@ -21,6 +21,11 @@
   button {
     border: 0;
     background: none;
+    font-size: 1.5rem;
+
+    &:disabled {
+      opacity: .2;
+    }
   }
 }
 
@@ -126,37 +131,3 @@
     }
   }
 }
-
-
-
-// .backward {
-//   .timeline-item-enter {
-//     transform: translate(-100%);
-//     &.timeline-item-enter-active {
-//       transform: translate(0);
-//     }
-//   }
-  
-//   .timeline-item-exit {
-//     transform: translate(0);
-//     &.timeline-item-exit-active {
-//       transform: translate(100%);
-//     }
-//   }
-// }
-
-// .forward {
-//   .timeline-item-enter {
-//     transform: translate(100%);
-//     &.timeline-item-enter-active {
-//       transform: translate(0);
-//     }
-//   }
-  
-//   .timeline-item-exit {
-//     transform: translate(0);
-//     &.slide-tab-exit-active {
-//       transform: translate(-100%);
-//     }
-//   }
-// }

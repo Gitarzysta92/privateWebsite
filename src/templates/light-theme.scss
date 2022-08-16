@@ -107,7 +107,7 @@ a:hover, a:not([href]):not([class]):hover{
 
     button  {
       color: $text-secondary-light-theme; 
-      &:hover { color: $theme-orange; }
+      &:not(:disabled):hover { color: $theme-orange; }
     }
     .timeline-container .timeline-wrapper {
 

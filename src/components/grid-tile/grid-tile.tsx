@@ -1,6 +1,5 @@
-import React, { ReactElement, useContext } from "react";
+import React, { ReactElement, useState } from "react";
 import BasicButton, { IBasicButton } from "../buttons/basic-button/basic-button";
-import { ThemeContext } from "../theme-provider/theme-provider";
 import './grid-tile.scss';
 
 export interface IGridTile {
@@ -11,12 +10,16 @@ export interface IGridTile {
 }
 
 export default function GridTile({ data, wide, dimmed }: { data: IGridTile, wide?: boolean, dimmed?: boolean }): ReactElement {
+  const [hover, setState] = useState(false);
 
   return (
-    <div className={`grid-tile ${wide ? 'wide' : ''} ${dimmed ? 'dimmed' : ''}`}>
+    <div className={`grid-tile ${wide ? 'wide' : ''} ${dimmed ? 'dimmed' : ''}`}
+      onMouseEnter={() => setState(true)}
+      onMouseLeave={() => setState(false)}>
+      <a href={data.button.link} target="_blank"></a>
       <h3>{data.title}</h3>
       <p>{data.subtitle}</p>
-      <BasicButton data={data.button}></BasicButton>
+      <BasicButton data={data.button} forceHoover={hover}></BasicButton>
       { data.backgroundImage ? <div className="background-image-container" style={{ backgroundImage: `url(${data.backgroundImage})` }} /> : <></> }
     </div>
   )

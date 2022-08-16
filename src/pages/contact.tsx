@@ -13,7 +13,7 @@ const ContactPage = (props: PageProps) => {
           <div className="col-12">
             <span>{contactData.title}</span>
             <i className="fa-solid fa-envelope-open-text"></i>
-            <h1>{contactData.email}</h1>
+            <a href={`mailto: ${contactData.email}`} >{contactData.email}</a>
           </div>
         </div>
       </section>

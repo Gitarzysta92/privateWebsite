@@ -43,9 +43,10 @@ export default function HorizontalTimeline({ data }: { data: IHorizontalTimeline
   return (
     <div>
       <div className="navigational-bar">
-        <button onClick={setPrevTab}>
+        <button onClick={setPrevTab} disabled={activeOcurrency === 0}>
           <i className="fa-solid fa-circle-chevron-left"></i>
         </button>
+
         <div className="timeline-container">
           <TransitionGroup className={`${direction} timeline-wrapper`} style={
             {
@@ -73,8 +74,7 @@ export default function HorizontalTimeline({ data }: { data: IHorizontalTimeline
           </TransitionGroup>
         </div>
         
-
-        <button onClick={setNextTab}>
+        <button onClick={setNextTab} disabled={activeOcurrency === data.occurences.length - 1}>
           <i className="fa-solid fa-circle-chevron-right"></i>
         </button>
       </div>
