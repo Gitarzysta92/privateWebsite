@@ -22,6 +22,8 @@ export default function HTML(props) {
 
             if (className != null) {
               body.classList.add(className);
+            } else {
+              body.classList.add("light-theme")
             }
           `
         }}
