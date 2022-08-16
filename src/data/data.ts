@@ -26,12 +26,12 @@ export const mainMenu: INavigationMenuItem[] = [
     childerns: [
       { 
         title: "Crypto alert",
-        link: "https://white-desert-0132b9510.1.azurestaticapps.net/dashboard",
+        link: "http://cryptoalert.tk",
         appearance: "link",
       },
       { 
         title: "Hex chess",
-        link: "",
+        link: "http://hexchess.tk",
         appearance: "link",
       }
     ]
@@ -55,8 +55,8 @@ export const footer: IFooter = {
   second: {
     title: "Projects",
     items: [
-      { title: "Hex chess", link: "/" },
-      { title: "Crypto alert", link: "https://white-desert-0132b9510.1.azurestaticapps.net/dashboard" }
+      { title: "Hex chess", link: "http://hexchess.tk" },
+      { title: "Crypto alert", link: "http://cryptoalert.tk" }
     ]
   },
   third: {
@@ -79,8 +79,8 @@ export const footer: IFooter = {
 // Home
 
 export const aboutPageReferenceSection: IPageReferenceSection = {
-  title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  title: "Builds apps that using is a pure pleasure.",
+  subtitle: "Well written code, undoubtedly is a really hard goal to achieve, but delivering real value for end user is on a whole different level of difficulty.",
   button: {
     label: "About me",
     link: "/about-me"
@@ -89,14 +89,14 @@ export const aboutPageReferenceSection: IPageReferenceSection = {
 
 export const gridSectionHeader: ISectionHeader = {
   title: "Projects",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  subtitle: "Check projects im currently working on, or share an project idea!",
   faIcon: "fa-solid fa-chevron-down"
 }
 
 
 export const nextProjectGridTile: IGridTile = {
   title: "Project idea?",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  subtitle: "Have an idea but you're non tech guy? Or maybe you're a dev who is looking for the company?",
   button: {
     label: "Contact",
     link: "/contact"
@@ -105,27 +105,27 @@ export const nextProjectGridTile: IGridTile = {
 
 export const cryptoAlertGridTile: IGridTile = {
   title: "Crypto Alert.",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  subtitle: "Set alarms for price changes, and trade crypto virtually without risking your own money.",
   button: {
     label: "Read more",
-    link: "https://white-desert-0132b9510.1.azurestaticapps.net/dashboard"
+    link: "http://cryptoalert.tk"
   },
   backgroundImage: "/images/crypto-alert.jpg"
 }
 
 export const hexGridTile: IGridTile = {
   title: "Hex chess.",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  subtitle: "Browser implementation of popular board game, with aspiration for something more.",
   button: {
     label: "Read more",
-    link: ""
+    link: "http://hexchess.tk"
   },
   backgroundImage: "/images/hex.jpg"
 }
 
 export const articlesHeader: ISectionHeader = {
   title: "Articles",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  subtitle: "Project related news and some overall tech oriented thoughts in development area.",
   faIcon: "fa-solid fa-chevron-down"
 }
 
@@ -136,8 +136,8 @@ export const wordpressNewsfeed: IWordpressNewsfeedConfiguration = {
 // About me
 
 export const aboutMeSection = {
-  title: "Fullstack developer",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sed vivamus neque posuere sit aliquam mattis id. Nisl, ut pellentesque pulvinar integer purus enim integer. Urna, pellentesque rhoncus sit et odio nunc dolor. Felis, sit libero, ipsum blandit augue porttitor in. Congue pulvinar enim tempus dictumst quam in velit. Lacus, imperdiet nibh in tellus. Mattis erat dictum quisque non id donec egestas et libero. ",
+  title: "Wannabe architect (yet)",
+  text: "I am an IT passionate, with solid commercial experience in software development, mostly in legaltech, foodtech and retail fields. Im worked, for such companies like Olewnik, Diebold Nixdorf, EastWestLink, and a lot of smaller ones. During all of these years in software development, I tried to touch nearly all aspects of development process, which gave me a priceless outlook on the wide picture of creating software, and this wide picture is what interests me the most. Currently im working on my own projects related to crypto and gaming field.",
   image: "/images/avatar.jpg"
 }
 
@@ -149,7 +149,7 @@ export const techStackSection = {
 }
 
 export const contactSection = {
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu laoreet urna, ullamcorper convallis lorem. Integer faucibus tortor quis iaculis sagittis. Proin condimentum pretium ipsum nec venenatis. Sed mattis ornare cursus. Donec fermentum, nunc placerat condimentum cursus, tortor lorem tempor dolor, sit amet placerat nisi elit a mauris. Vivamus vitae sollicitudin eros. Nulla justo ex, lobortis posuere facilisis vitae, finibus et quam.",
+  text: "If you think good architecture is expensive, try bad architecture. - Brian Foote.",
   button: {
     label: "Contact me",
     link: "/contact"
@@ -160,38 +160,32 @@ export const contactSection = {
 export const experienceSection: IHorizontalTimeline & ISectionHeader = {
   startingIndex: 0,
   title: "Experience",
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
+  subtitle: "Quick brief of what i was doing in the last years.",
   faIcon: "fa-solid fa-chevron-down",
   occurences: [
     {
+      title: "Fullstack/DevOps Engineer",
+      subtitle: "EastWestLink sp. z o.o.",
+      description: "Responsible for implementing CI/CD solutions for software development department. Developing new tools, services, and reusable ui elements for domain teams. Maintaining microservices architecture.",
+      date: "12.2021 - currently"
+    },
+    {
+      title: "Fullstack Developer",
+      subtitle: "DiebolNixdorf sp. z o.o.",
+      description: "Responsible for development new features (front and back) for VEngage product, including technical design and implementation. Major refactoring of webclient app, developed in the Angular. Creating new microservices.",
+      date: "9.2021 - 3.2021"
+    },
+    {
+      title: "Fullstack Developer",
+      subtitle: "Synchroner sp. z o.o.",
+      description: "Responsible for development new features (front and back) for SyncHRoner (SaaS) main product, including technical design, software implementation, troubleshooting, documentation. test development and execution. Leading in major refactorings/architectual redesigns in SyncHRoner. For example, latest completed project was to redesign permissions across whole system. Making integrations with third party services/websites. Also being a member of the devops team and participating in CI/CD development and maintenance.",
+      date: "2019 - 03.2021"
+    },
+    {
       title: "Front-end Developer",
       subtitle: "Creative sp. z o.o.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quam mattis dignissim ridiculus tellus risus sit. Sit arcu sem venenatis urna in aliquet pharetra risus aliquam. Nisi, a aliquet dictum auctor ut ut tellus volutpat. Adipiscing cursus ultricies et volutpat phasellus ut. ",
-      date: new Date()
-    },
-    {
-      title: "Experience2",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
-      description: "dasd",
-      date: new Date()
-    },
-    {
-      title: "Experience3",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
-      description: "dasd",
-      date: new Date()
-    },
-    {
-      title: "Experience4",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
-      description: "dasd",
-      date: new Date()
-    },
-    {
-      title: "Experience5",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit sed enim nulla lorem et.",
-      description: "dasd",
-      date: new Date()
+      description: "Managing a team of freelance web developers. Designing, coding and implementing of web pages based on technologies, including HTML, CSS, Javascript, PHP. Company internal web services managment. Responsible for mail platform, web server, domains, etc.",
+      date: "2013 - 2019"
     },
   ]
 }
@@ -200,16 +194,10 @@ export const testimontialSection: ITestimontialSlider = {
   startingIndex: 0,
   testimontials: [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu laoreet urna, ullamcorper convallis lorem. Integer faucibus tortor quis iaculis sagittis. Proin condimentum pretium ipsum nec venenatis. Sed mattis ornare cursus. Donec fermentum, nunc placerat condimentum cursus, tortor lorem tempor dolor, sit amet placerat nisi elit a mauris. Vivamus vitae sollicitudin eros. Nulla justo ex, lobortis posuere facilisis vitae, finibus et quam.",
-      signature: "Michał Lukasiewicz",
-      signatureDescription: "UX researcher at AQA ",
-      image: "/images/avatar.jpg"
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu laoreet urna, ullamcorper convallis lorem. Integer faucibus tortor quis iaculis sagittis. Proin condimentum pretium ipsum nec venenatis. Sed mattis ornare cursus. Donec fermentum, nunc placerat condimentum cursus, tortor lorem tempor dolor, sit amet placerat nisi elit a mauris. Vivamus vitae sollicitudin eros. Nulla justo ex, lobortis posuere facilisis vitae, finibus et quam.",
-      signature: "Michał Lukasiewicz",
-      signatureDescription: "UX researcher at AQA ",
-      image: "/images/avatar.jpg"
+      text: "I believe, any software engineer should be able to understand the requirements, deliver on time, deliver according to the requirements. With Michał Łukasiewicz all those three requirements was fulfilled. It’s a great developer with excellent communication skills and business oriented attitude.",
+      signature: "Jacek Ziąbski",
+      signatureDescription: "CEO Creative sp. z o.o.",
+      image: "/images/jacek.jpg"
     }
   ]
 }
@@ -217,6 +205,6 @@ export const testimontialSection: ITestimontialSlider = {
 // Contact
 
 export const contactData = {
-  title: "Lorem ipsum dolor sit amet",
+  title: "Heave any questions?",
   email: "contact@michallukasiewicz.com"
 }

@@ -12,7 +12,7 @@ export interface IHorizontalTimelineEvent {
   title: string;
   subtitle: string;
   description: string;
-  date: Date;
+  date: Date | string;
 }
 
 export default function HorizontalTimeline({ data }: { data: IHorizontalTimeline }): ReactElement {
@@ -65,7 +65,7 @@ export default function HorizontalTimeline({ data }: { data: IHorizontalTimeline
                 classNames="timeline-item">     
                 <div onClick={() => setTargetTab(i)} className={`timeline-item ${activeOcurrency === i ? 'active' : ''}`}>
                   <div className="timeline-indicator">
-                    <div className="timeline-item-date">{ e.date.toDateString() }</div>
+                    <div className="timeline-item-date">{ (e.date as Date).toDateString ? (e.date as Date).toDateString() : e.date }</div>
                   </div>
                 </div>
               </CSSTransition>
