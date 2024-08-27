@@ -3,6 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import './sticky-header.scss';
 
 export enum StickyHeaderState {
+  default,
   sticky,
   hidden
 }
@@ -10,22 +11,29 @@ export enum StickyHeaderState {
 
 
 export default function StickyHeader(props: PropsWithChildren<any>): ReactElement | null {
-  const svp = typeof scrollY !== 'undefined' ? scrollY : 0;
-  const [state, setState] = useState(svp != 0 ? StickyHeaderState.sticky : StickyHeaderState.hidden);
+  let defaultState = StickyHeaderState.default
+
+  if (scrollY > 0) {
+    defaultState = StickyHeaderState.sticky
+  }
+
+  const [state, setState] = useState(defaultState as StickyHeaderState);
   
   const stickyTreshold = 200; 
-  const prevPosition = useRef(svp);
+  const prevPosition = useRef(scrollY);
   const prevState = useRef(state);
 
   const handleScroll = () => {
     
-    let newState;
+    let newState: StickyHeaderState;
     const directionUp = prevPosition.current! > scrollY!;
       
-    if (directionUp && scrollY! > stickyTreshold) {
+    if (directionUp && scrollY > stickyTreshold) {
       newState = StickyHeaderState.sticky;
-    } else {
+    } else if (scrollY > stickyTreshold) {
       newState = StickyHeaderState.hidden;
+    } else {
+      newState = StickyHeaderState.default;
     }
 
     if (prevState.current != newState) {
@@ -47,8 +55,9 @@ export default function StickyHeader(props: PropsWithChildren<any>): ReactElemen
   return (
     <CSSTransition
       unmountOnExit
-      in={state === StickyHeaderState.sticky}
+      in={state === StickyHeaderState.sticky || state === StickyHeaderState.default}
       timeout={1000}
+      className={ `sticky ${state === StickyHeaderState.default ? "default" : ""}` }
       classNames="sticky-header">
       {props.children}
     </CSSTransition>

@@ -39,7 +39,7 @@ export default function HeaderTemplate(): ReactElement | null  {
       </div>
 
       <StickyHeader>
-        <div className="sticky">
+        <div>
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -54,17 +54,6 @@ export default function HeaderTemplate(): ReactElement | null  {
         </div>
       </StickyHeader>
 
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="header-bar d-flex justify-content-between">
-              <LogoWrapper></LogoWrapper>
-              <BurgerButton onClick={() => setState(true)}></BurgerButton>
-              <NavigationMenu data={mainMenu}></NavigationMenu>
-            </div>
-          </div>
-        </div>
-      </div>
       {slidePane}
     </header>
   )

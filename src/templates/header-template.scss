@@ -2,6 +2,7 @@
 
 header {
   position: relative;
+  height: 20vh;
 
   .container {
     padding: 30px 50px;
@@ -11,12 +12,18 @@ header {
     position: absolute;
     top: 47px;
     right: 20px;
+    z-index: 200;
   }
 
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+
+    &.default {
+      margin-top: 20px;
+    }
+
     .container {
       padding: 10px 50px;
     }

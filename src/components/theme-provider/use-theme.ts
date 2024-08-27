@@ -12,8 +12,22 @@ export interface IUseThemeContext {
 }
 
 export const useTheme = (): IUseThemeContext => {
-  const [theme, setTheme] = useState(typeof window != 'undefined' ? window.localStorage.getItem('theme')! : ThemeType.light);
+  let defaultTheme = window.localStorage.getItem('theme');
+  if (!defaultTheme && 'matchMedia' in window) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      defaultTheme = ThemeType.dark;
+    } else {
+      defaultTheme = ThemeType.light;
+    }
+  }
+
+  if (!defaultTheme) {
+    defaultTheme = ThemeType.light
+  }
+
+  const [theme, setTheme] = useState(defaultTheme);
   const [componentMounted, setComponentMounted] = useState(false);
+
   const toggleTheme = () => {
     if (theme === ThemeType.light) {
       window.localStorage.setItem('theme', ThemeType.dark);

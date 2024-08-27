@@ -17,7 +17,7 @@ interface IWordpressNews {
 
 export default function WordpressNewsfeed({ data }: { data: IWordpressNewsfeedConfiguration }): ReactElement {
 
-  const [articles, setArticles] = useState(null as unknown as IWordpressNews[] | null);
+  const [articles, setArticles] = useState(null as IWordpressNews[] | null);
   useEffect(() => {
     fetch(data.url, {
       referrerPolicy: "unsafe-url"

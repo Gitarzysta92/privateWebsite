@@ -13,7 +13,7 @@ a:hover, a:not([href]):not([class]):hover{
   }
 
   background-color: $background-tertiary-dark-theme;
-  header .sticky {
+  header .sticky:not(.default) {
     background-color: rgba(25, 29, 32, 0.95);
   }
 

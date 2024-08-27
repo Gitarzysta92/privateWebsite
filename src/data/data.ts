@@ -17,6 +17,23 @@ export const mainMenu: INavigationMenuItem[] = [
   {
     title: "About me",
     link: "/about-me",
+    childerns: [
+      {
+        title: "Bio",
+        link: "/about-me",
+        appearance: "link"
+      },
+      { 
+        title: "Linkedin",
+        link: "https://www.linkedin.com/in/micha%C5%82-%C5%82ukasiewicz-6bb38361/",
+        appearance: "link",
+      },
+      { 
+        title: "Github",
+        link: "https://github.com/Gitarzysta92",
+        appearance: "link",
+      }
+    ],
     appearance: "link"
   },
   {
@@ -25,13 +42,13 @@ export const mainMenu: INavigationMenuItem[] = [
     link: "/projects",
     childerns: [
       { 
-        title: "Crypto alert",
-        link: "http://cryptoalert.tk",
+        title: "Dungeon Venture",
+        link: "http://dungeon-venture.com",
         appearance: "link",
       },
       { 
         title: "Hex chess",
-        link: "http://hexchess.tk",
+        link: "https://github.com/Gitarzysta92/hexChess",
         appearance: "link",
       }
     ]
@@ -55,14 +72,13 @@ export const footer: IFooter = {
   second: {
     title: "Projects",
     items: [
-      { title: "Hex chess", link: "http://hexchess.tk" },
-      { title: "Crypto alert", link: "http://cryptoalert.tk" }
+      { title: "Dungeon venture", link: "http://dungeon-venture.com/" },
+      { title: "Hex chess", link: "https://github.com/Gitarzysta92/hexChess" }
     ]
   },
   third: {
     title: "Social media",
     items: [
-      { title: "Facebook", link: "https://www.facebook.com/asdasd.gffgdfg" },
       { title: "Linkedin", link: "https://www.linkedin.com/in/micha%C5%82-%C5%82ukasiewicz-6bb38361/" },
       { title: "Github", link: "https://github.com/Gitarzysta92" }
     ]
@@ -103,14 +119,14 @@ export const nextProjectGridTile: IGridTile = {
   },
 }
 
-export const cryptoAlertGridTile: IGridTile = {
-  title: "Crypto Alert.",
-  subtitle: "Set alarms for price changes, and trade crypto virtually without risking your own money.",
+export const dungeonVentureTile: IGridTile = {
+  title: "Dungeon venture.",
+  subtitle: "Dungeon Venture is an innovative adventure oriented deckbuilder.",
   button: {
     label: "Read more",
-    link: "http://cryptoalert.tk"
+    link: "http://dungeon-venture.com/"
   },
-  backgroundImage: "/images/crypto-alert.jpg"
+  backgroundImage: "/images/dungeon-venture.jpg"
 }
 
 export const hexGridTile: IGridTile = {
@@ -136,8 +152,8 @@ export const wordpressNewsfeed: IWordpressNewsfeedConfiguration = {
 // About me
 
 export const aboutMeSection = {
-  title: "Wannabe architect (yet)",
-  text: "I am an IT passionate, with solid commercial experience in software development, mostly in legaltech, foodtech and retail fields. Im worked, for such companies like Olewnik, Diebold Nixdorf, EastWestLink, and a lot of smaller ones. During all of these years in software development, I tried to touch nearly all aspects of development process, which gave me a priceless outlook on the wide picture of creating software, and this wide picture is what interests me the most. Currently im working on my own projects related to crypto and gaming field.",
+  title: "IT passionate",
+  text: "I am IT passionate with solid commercial experience in software development, primarily in the legaltech, foodtech, and retail sectors. I have worked for companies such as Olewnik, Diebold Nixdorf, EastWestLink, as well as many smaller ones. Over the years, I have gained experience in nearly every aspect of the software development process, providing me with a comprehensive understanding of the broader picture of software creation, which is really useful in overall process of designing software. Currently, I am working on my own project related to the gaming field.",
   image: "/images/avatar.jpg"
 }
 
@@ -164,22 +180,28 @@ export const experienceSection: IHorizontalTimeline & ISectionHeader = {
   faIcon: "fa-solid fa-chevron-down",
   occurences: [
     {
+      title: "Founder/Dev - Dungeon Venture",
+      subtitle: "Threesixty sp. z o.o.",
+      description: "Desing and development of the adventure/deckbuilder/rpg, browser based game.",
+      date: "2022 - 2023"
+    },
+    {
       title: "Fullstack/DevOps Engineer",
       subtitle: "EastWestLink sp. z o.o.",
       description: "Responsible for implementing CI/CD solutions for software development department. Developing new tools, services, and reusable ui elements for domain teams. Maintaining microservices architecture.",
-      date: "12.2021 - currently"
+      date: "2022 - 2023"
     },
     {
       title: "Fullstack Developer",
       subtitle: "DiebolNixdorf sp. z o.o.",
       description: "Responsible for development new features (front and back) for VEngage product, including technical design and implementation. Major refactoring of webclient app, developed in the Angular. Creating new microservices.",
-      date: "9.2021 - 3.2021"
+      date: "2021 - 2022"
     },
     {
       title: "Fullstack Developer",
       subtitle: "Synchroner sp. z o.o.",
       description: "Responsible for development new features (front and back) for SyncHRoner (SaaS) main product, including technical design, software implementation, troubleshooting, documentation. test development and execution. Leading in major refactorings/architectual redesigns in SyncHRoner. For example, latest completed project was to redesign permissions across whole system. Making integrations with third party services/websites. Also being a member of the devops team and participating in CI/CD development and maintenance.",
-      date: "2019 - 03.2021"
+      date: "2019 - 2021"
     },
     {
       title: "Front-end Developer",
