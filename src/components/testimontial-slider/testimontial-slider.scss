@@ -20,7 +20,7 @@
     display: none;
   }
 
-  @media only screen and (max-width: $msm) {
+  @media only screen and (max-width: $lsm) {
     padding: 10px 30px;
     flex-direction: column;
 

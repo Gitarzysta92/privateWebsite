@@ -6,7 +6,7 @@ a:hover, a:not([href]):not([class]):hover{
 
 .light-theme  {
   background-color: $background-primary-light-theme;
-  header .sticky {
+  header .sticky:not(.default) {
     background-color: rgba(241, 241, 241, 0.9);
   }
 

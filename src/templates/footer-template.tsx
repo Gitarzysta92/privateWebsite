@@ -22,16 +22,16 @@ export default function FooterTemplate(): ReactElement  {
     <footer>
       <div className="container">
         <div className="row">
-          <div className="col-6 col-lg-3">
+          <div className="col-12 col-lg-3">
             {generateList(footer.first)}
           </div>
-          <div className="col-6 col-lg-3">
+          <div className="col-12 col-lg-3">
             {generateList(footer.second)}
           </div>
-          <div className="col-6 col-lg-3">
+          <div className="col-12 col-lg-3">
             {generateList(footer.third)}
           </div>
-          <div className="col-6 col-lg-3">
+          <div className="col-12 col-lg-3">
             {generateList(footer.fourth)}
           </div>
         </div>

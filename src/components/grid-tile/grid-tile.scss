@@ -17,7 +17,7 @@
   padding: 70px;
 
   @media only screen and (max-width: $msm) {
-    padding: 50px;
+    padding: 50px 30px;
   }
 
   background: $primary-gradient;
@@ -47,6 +47,9 @@
     font-size: 63px;
     font-weight: 700;
     width: 70%;
+    @media only screen and (max-width: $msm) {
+      font-size: 40px;
+    }
   }
 
   p {

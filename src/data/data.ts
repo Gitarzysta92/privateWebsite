@@ -134,7 +134,7 @@ export const hexGridTile: IGridTile = {
   subtitle: "Browser implementation of popular board game, with aspiration for something more.",
   button: {
     label: "Read more",
-    link: "http://hexchess.tk"
+    link: "https://github.com/Gitarzysta92/hexChess"
   },
   backgroundImage: "/images/hex.jpg"
 }

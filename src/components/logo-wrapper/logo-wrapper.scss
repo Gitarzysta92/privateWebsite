@@ -8,19 +8,9 @@
   background: $primary-gradient;
   border-radius: 50em;
   cursor: pointer;
+  transition: transform ease-in-out .2s;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50em;
-    transform: scale(0.7);
-    transition: all ease-in-out .2s;
-  }
-
-  &:hover::after {
-    transform: scale(0.4); 
+  &:hover {
+    transform: scale(1.1); 
   }
 }
