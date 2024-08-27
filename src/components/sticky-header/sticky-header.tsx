@@ -12,15 +12,20 @@ export enum StickyHeaderState {
 
 export default function StickyHeader(props: PropsWithChildren<any>): ReactElement | null {
   let defaultState = StickyHeaderState.default
+  let initialScroll = 0;
 
-  if (scrollY > 0) {
+  if (typeof scrollY !== 'undefined') {
+    initialScroll = scrollY;
+  }
+
+  if (initialScroll > 0) {
     defaultState = StickyHeaderState.sticky
   }
 
   const [state, setState] = useState(defaultState as StickyHeaderState);
   
   const stickyTreshold = 200; 
-  const prevPosition = useRef(scrollY);
+  const prevPosition = useRef(initialScroll);
   const prevState = useRef(state);
 
   const handleScroll = () => {

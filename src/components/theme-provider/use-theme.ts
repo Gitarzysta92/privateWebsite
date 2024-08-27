@@ -11,18 +11,24 @@ export interface IUseThemeContext {
   componentMounted: boolean;
 }
 
-export const useTheme = (): IUseThemeContext => {
-  let defaultTheme = window.localStorage.getItem('theme');
-  if (!defaultTheme && 'matchMedia' in window) {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      defaultTheme = ThemeType.dark;
-    } else {
-      defaultTheme = ThemeType.light;
-    }
-  }
 
-  if (!defaultTheme) {
-    defaultTheme = ThemeType.light
+
+export const useTheme = (): IUseThemeContext => {
+  let defaultTheme = ThemeType.dark
+  
+  if (typeof window !== 'undefined') {
+    window?.localStorage.getItem('theme');
+    if (!defaultTheme && 'matchMedia' in window) {
+      if (window?.matchMedia('(prefers-color-scheme: dark)').matches) {
+        defaultTheme = ThemeType.dark;
+      } else {
+        defaultTheme = ThemeType.light;
+      }
+    }
+  
+    if (!defaultTheme) {
+      defaultTheme = ThemeType.light
+    }
   }
 
   const [theme, setTheme] = useState(defaultTheme);
@@ -43,12 +49,12 @@ export const useTheme = (): IUseThemeContext => {
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
+    const localTheme = window?.localStorage.getItem('theme');
     if (localTheme) {
       setTheme(localTheme as ThemeType);
     } else {
       setTheme(ThemeType.light)
-      window.localStorage.setItem('theme', ThemeType.light)
+      window?.localStorage.setItem('theme', ThemeType.light)
     }
     setComponentMounted(true);
   }, []);
