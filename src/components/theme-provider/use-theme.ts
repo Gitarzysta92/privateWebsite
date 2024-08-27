@@ -26,23 +26,30 @@ export const useTheme = (): IUseThemeContext => {
   const [theme, setTheme] = useState(defaultTheme);
   const [componentMounted, setComponentMounted] = useState(false);
 
+  const setDarkTheme = () => {
+    window.localStorage.setItem('theme', ThemeType.dark);
+    document.body.classList.add(ThemeType.dark);
+    document.body.classList.remove(ThemeType.light);
+    setTheme(ThemeType.dark);
+  }
+
+  const setLightTheme = () => {
+    window.localStorage.setItem('theme', ThemeType.light);
+    document.body.classList.add(ThemeType.light);
+    document.body.classList.remove(ThemeType.dark);
+    setTheme(ThemeType.light);
+  }
+
   const toggleTheme = () => {
     if (theme === ThemeType.light) {
-      window.localStorage.setItem('theme', ThemeType.dark);
-      document.body.classList.add(ThemeType.dark);
-      document.body.classList.remove(ThemeType.light);
-      setTheme(ThemeType.dark);
+      setDarkTheme()
     } else {
-      window.localStorage.setItem('theme', ThemeType.light);
-      document.body.classList.add(ThemeType.light);
-      document.body.classList.remove(ThemeType.dark);
-      setTheme(ThemeType.light);
+      setLightTheme()
     }
   };
 
   useEffect(() => {
     let localTheme = window?.localStorage.getItem('theme');
-
     if (!localTheme && 'matchMedia' in window) {
       if (window?.matchMedia('(prefers-color-scheme: dark)').matches) {
         localTheme = ThemeType.dark;
@@ -50,12 +57,10 @@ export const useTheme = (): IUseThemeContext => {
         localTheme = ThemeType.light;
       }
     }
-    
-    if (localTheme) {
-      setTheme(localTheme as ThemeType);
+    if (localTheme === ThemeType.dark) {
+      setDarkTheme()
     } else {
-      setTheme(ThemeType.light)
-      window?.localStorage.setItem('theme', ThemeType.light)
+      setLightTheme()
     }
     setComponentMounted(true);
   }, []);
